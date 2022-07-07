@@ -1,9 +1,13 @@
 <template>
-  <h1>Hello Vue112</h1>
+  <h1>Hello Vue + TS</h1>
 </template>
 
 <script>
 export default {
   name: "App",
+  components: {},
+  data() {
+    return {};
+  },
 };
 </script>
