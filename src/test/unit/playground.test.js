@@ -12,22 +12,27 @@ describe("basic math", () => {
   });
 });
 
+// even or odd
 describe("even or odd", () => {
   describe("when even", () => {
     it("even:", () => {
       expect(evenOrOdd(4)).toBe("Even");
     });
   });
+
   describe("when odd", () => {
     it("odd:", () => {
       expect(evenOrOdd(3)).toBe("Odd");
     });
   });
 });
+// even or odd
 
+// multiply
 describe("multiply", () => {
   // it - test fn
   it("multiply two numbers", () => {
     expect(multiply(2, 3)).toBe(6);
   });
 });
+// multiply
