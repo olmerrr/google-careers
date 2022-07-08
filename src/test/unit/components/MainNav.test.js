@@ -4,16 +4,21 @@ import MainNav from "@/components/MainNav.vue";
 describe("MainNav", () => {
   it("displays company name", () => {
     const wrapper = mount(MainNav);
-    // wecan use second arg in mount
-    // wrapper = mount(MainNav, {
-    //   data() {
-    //     return {
-    //       company: "Super Corp",
-    //     };
-    //   },
-    // });
-    // console.log(wrapper.text());
-    // console.log(wrapper.html());
-    expect(wrapper.text()).toMatch("Super Corp");
+    expect(wrapper.text()).toMatch("Bobo Careers");
+  });
+
+  it("displays menu items for navigation", () => {
+    const wrapper = mount(MainNav);
+    const navigationMenuItems = wrapper.findAll("li");
+    //  check menu items on value
+    const navigationMenuText = navigationMenuItems.map((item) => item.text());
+    expect(navigationMenuText).toEqual([
+      "Teams",
+      "Locations",
+      "Life at Bobo",
+      "How we hire",
+      "Students",
+      "Jobs",
+    ]);
   });
 });
