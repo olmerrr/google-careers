@@ -16,6 +16,8 @@
               class="h-full ml-9 first:ml-0"
               data-test="main-nav-list-item"
             >
+              <!-- data-test="main-nav-list-item"
+            this attr for test data in Jest -->
               <a href="/" class="flex items-center h-full py-2.5">{{
                 menuItem
               }}</a>
