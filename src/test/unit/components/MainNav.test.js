@@ -28,35 +28,22 @@ describe("MainNav", () => {
   // test v-if
   describe("when user logged out", () => {
     it("user to sign in", () => {
-      const wrapper = mount(MainNav, {
-        data() {
-          return {
-            isLoggedIn: false,
-          };
-        },
-      });
+      const wrapper = mount(MainNav);
       const loginBtn = wrapper.find("[data-test='login-button']");
-      const profileImage = wrapper.find("[data-test='profile-image']");
       expect(loginBtn.exists()).toBe(true);
-      expect(profileImage.exists()).toBe(false);
     });
   });
 
   describe("when user logs in", () => {
-    it("display user profile image", () => {
-      const wrapper = mount(MainNav, {
-        data() {
-          return {
-            isLoggedIn: true,
-          };
-        },
-      });
+    it("display user profile image", async () => {
+      const wrapper = mount(MainNav);
+      let profileImage = wrapper.find("[data-test='profile-image']");
+      expect(profileImage.exists()).toBe(false);
+
       const loginBtn = wrapper.find("[data-test='login-button']");
-      const profileImage = wrapper.find("[data-test='profile-image']");
-      // not best variant, becose cmp name can't change
-      // const loginBtn = wrapper.findComponent({ name: "ActionButton" });
-      // const profileImage = wrapper.findComponent({ name: "ProfileImage" });
-      expect(loginBtn.exists()).toBe(false);
+      await loginBtn.trigger("click");
+
+      profileImage = wrapper.find("[data-test='profile-image']");
       expect(profileImage.exists()).toBe(true);
     });
   });
