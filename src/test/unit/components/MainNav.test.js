@@ -39,10 +39,8 @@ describe("MainNav", () => {
       const wrapper = mount(MainNav);
       let profileImage = wrapper.find("[data-test='profile-image']");
       expect(profileImage.exists()).toBe(false);
-
       const loginBtn = wrapper.find("[data-test='login-button']");
       await loginBtn.trigger("click");
-
       profileImage = wrapper.find("[data-test='profile-image']");
       expect(profileImage.exists()).toBe(true);
     });

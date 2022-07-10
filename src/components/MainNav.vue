@@ -26,7 +26,12 @@
         </nav>
         <div class="flex items-center h-full py-2.5 ml-auto">
           <profile-image v-if="isLoggedIn" data-test="profile-image" />
-          <action-button v-else data-test="login-button" @click="signIn" />
+          <action-button
+            v-else
+            data-test="login-button"
+            :text="loginText"
+            @click="signIn"
+          />
         </div>
       </div>
     </div>
@@ -55,6 +60,7 @@ export default {
         "Jobs",
       ],
       isLoggedIn: false,
+      loginText: "Sign in",
     };
   },
   methods: {
@@ -64,5 +70,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
