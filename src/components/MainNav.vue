@@ -29,7 +29,8 @@
           <action-button
             v-else
             data-test="login-button"
-            :text="loginText"
+            text="Sign in"
+            type="primary"
             @click="signIn"
           />
         </div>
