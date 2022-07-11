@@ -14,6 +14,7 @@ describe("ActionButton", () => {
   it("applies one of several styles to button", () => {
     const wrapper = mount(ActionButton, {
       props: {
+        text: "Some text",
         type: "primary",
       },
     });
