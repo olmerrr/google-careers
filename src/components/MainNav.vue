@@ -35,16 +35,19 @@
           />
         </div>
       </div>
+      <the-subnav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
 
 <script>
+import TheSubnav from "@/components/TheSubnav.vue";
 import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "./ProfileImage.vue";
 export default {
   name: "MainNav",
   components: {
+    TheSubnav,
     ActionButton,
     ProfileImage,
   },
