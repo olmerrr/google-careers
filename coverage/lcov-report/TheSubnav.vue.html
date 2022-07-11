@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for ProfileImage.vue</title>
+    <title>Code coverage report for TheSubnav.vue</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> ProfileImage.vue</h1>
+        <h1><a href="index.html">All files</a> TheSubnav.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -97,41 +97,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;section&gt;
-    &lt;img
-      class="w-8 h-8 object-contain rounded-3xl"
-      :src="imageLink"
-      alt="img"
-    /&gt;
-  &lt;/section&gt;
+  &lt;div class="w-full h-16 bg-white border-b border-solid border-brand-gray-1"&gt;
+    &lt;div class="flex items-center h-full px-8"&gt;
+      &lt;div v-if="onJobResultPage" data-test="job-count"&gt;
+        &lt;font-awesome-icon :icon="['fas', 'search']" class="mr-3" /&gt;
+        &lt;span&gt;
+          &lt;span class="text-brand-green-1"&gt;1234&lt;/span&gt;
+          jobs matched&lt;/span
+        &gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
-&nbsp;
 &lt;script&gt;
 export default {
-  name: "ProfileImage",
+  name: "TheSubnav",
   data() {
     return {
-      imageLink:
-        "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-128.png",
+      onJobResultPage: true,
     };
   },
 };
 &lt;/script&gt;
-&nbsp;
-&lt;style&gt;&lt;/style&gt;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
