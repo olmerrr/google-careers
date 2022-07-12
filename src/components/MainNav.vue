@@ -26,6 +26,7 @@
         </nav>
         <div class="flex items-center h-full py-2.5 ml-auto">
           <profile-image v-if="isLoggedIn" data-test="profile-image" />
+
           <action-button
             v-else
             data-test="login-button"
@@ -35,7 +36,7 @@
           />
         </div>
       </div>
-      <the-subnav v-if="isLoggedIn" />
+      <the-subnav v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
