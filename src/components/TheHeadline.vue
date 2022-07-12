@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Build for everyone</h1>
+    <h1>{{ action }} for everyone</h1>
     <h2>Find your next job at Bobo Corp.</h2>
   </section>
 </template>
@@ -10,11 +10,26 @@ export default {
   name: "TheHeadline",
   data() {
     return {
-      sample: "Hello Yaroslav",
+      action: "Build",
+      interval: null,
     };
   },
   created() {
-    console.log("Hey, i have been created!", this.sample);
+    this.changeTitle();
+  },
+  beforeUnmount() {
+    clearInterval(this.interval);
+  },
+  methods: {
+    changeTitle() {
+      this.interval = setInterval(() => {
+        const actions = ["Build", "Create", "Design", "Code"];
+        const currentActionIndex = actions.indexOf(this.action);
+        const nextActionIndex = (currentActionIndex + 1) % 4;
+        const nextAction = actions[nextActionIndex];
+        this.action = nextAction;
+      }, 3000);
+    },
   },
 };
 </script>
