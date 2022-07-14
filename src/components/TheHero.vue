@@ -7,7 +7,13 @@
           <the-headline />
           <job-search-form />
         </div>
-        <div class="col-start-7 col-span-5"></div>
+        <div class="col-start-7 col-span-5 self-center justify-self-center">
+          <img
+            src="@/assets/hero-img.jpg"
+            alt="hero-img"
+            class="h-80 w-80 object-contain"
+          />
+        </div>
         <div class="col-start-12 col-span-1"></div>
       </div>
     </section>
