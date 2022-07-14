@@ -43,7 +43,7 @@
 
 <script>
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
-import ActionButton from "@/components/ActionButton.vue";
+import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "./ProfileImage.vue";
 
 export default {
