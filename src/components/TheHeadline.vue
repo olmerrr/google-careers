@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="the-headline mb-16">
     <h1
       class="font-bold tracking-tighter text-8xl mb-14"
       data-test="action-phrase"
