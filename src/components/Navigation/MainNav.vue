@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import TheSubnav from "@/components/TheSubnav.vue";
+import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "./ProfileImage.vue";
 
