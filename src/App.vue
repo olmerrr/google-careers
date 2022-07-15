@@ -1,10 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <section>
+    <main-nav />
+    <router-view />
+  </section>
 </template>
+
+<script>
+import MainNav from "@/components/Navigation/MainNav.vue";
+
+export default {
+  name: "App",
+  components: {
+    MainNav,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -15,7 +25,7 @@
   color: #2c3e50;
 }
 
-nav {
+/* nav {
   padding: 30px;
 }
 
@@ -26,5 +36,5 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
