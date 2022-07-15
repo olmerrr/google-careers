@@ -11,7 +11,7 @@
 <script>
 export default {
   name: "TextInput",
-  prop: {
+  props: {
     placeholder: {
       type: String,
       required: false,
@@ -26,6 +26,7 @@ export default {
   methods: {
     handleInput($event) {
       this.value = $event.target.value;
+      this.$emit("handleInput", this.value);
     },
   },
 };
