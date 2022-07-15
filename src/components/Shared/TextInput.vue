@@ -18,6 +18,7 @@ export default {
       default: "",
     },
   },
+  emits: ["handleInput"],
   data() {
     return {
       value: "",
