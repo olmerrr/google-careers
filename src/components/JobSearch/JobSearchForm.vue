@@ -8,7 +8,11 @@
       <div class="relative flex items-center flex-1 h-full pr-3">
         <label class="absolute left-0 -top-10">Role</label>
 
-        <text-input v-model.trim="role" placeholder="Software engineer" />
+        <text-input
+          v-model.trim="role"
+          placeholder="Software engineer"
+          data-test="role-input"
+        />
       </div>
 
       <span
@@ -19,9 +23,18 @@
       <div class="relative flex items-center flex-1 h-full pl-3">
         <label class="absolute left-0 -top-10">Where</label>
 
-        <text-input v-model.trim="location" placeholder="Los Angeles" />
+        <text-input
+          v-model.trim="location"
+          placeholder="Los Angeles"
+          data-test="location-input"
+        />
 
-        <action-button text="Search" type="secondary" class="rounded-r-3xl" />
+        <action-button
+          text="Search"
+          type="secondary"
+          class="rounded-r-3xl"
+          data-test="form-submit-button"
+        />
       </div>
     </div>
   </form>
