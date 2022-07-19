@@ -1,7 +1,12 @@
 <template>
   <main class="flex-auto p-8 bg-brand-gray-2 text-left">
     <ol>
-      <job-listing v-for="job in jobs" :key="job.id" :job="job" />
+      <job-listing
+        v-for="job in jobs"
+        :key="job.id"
+        :job="job"
+        data-test="job-listing"
+      />
     </ol>
   </main>
 </template>
@@ -18,10 +23,9 @@ export default {
       jobs: [],
     };
   },
-  mounted() {
-    axios.get("http://localhost:3000/jobs").then((response) => {
-      this.jobs = response.data;
-    });
+  async mounted() {
+    const response = await axios.get("http://localhost:3000/jobs");
+    this.jobs = response.data;
   },
 };
 </script>
