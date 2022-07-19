@@ -55,4 +55,12 @@ describe("JobListing", () => {
       "Morph bricks-and-clicks relationships, whiteboard one-to-one experiences, and innovate distributed schemas"
     );
   });
+
+  it("links to individual job's page", () => {
+    const jobProps = createJobProps({ id: 15 });
+    const wrapper = mount(JobListing, createConfig(jobProps));
+    const jobPageLink = wrapper.findComponent(RouterLinkStub);
+    const toProp = jobPageLink.props("to");
+    expect(toProp).toBe("/job/results/15");
+  });
 });
