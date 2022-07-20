@@ -10,7 +10,7 @@
     </ol>
     <div class="mt-8 mx-auto">
       <div class="flex flex-row flex-nowrap">
-        <p class="text-sm flex-grow">Page: {{ currentPage }}</p>
+        <p class="text-sm flex-grow">Page {{ currentPage }}</p>
       </div>
 
       <div class="flex items-center justify-end">
