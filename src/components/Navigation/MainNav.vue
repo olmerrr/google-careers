@@ -12,8 +12,6 @@
 
         <nav class="h-full ml-12">
           <ul class="flex h-full p-0 m-0 list-none">
-            <!-- data-test="main-nav-list-item"
-            this attr for test data in Jest -->
             <li
               v-for="menuItem in menuItems"
               :key="menuItem.text"
@@ -29,7 +27,7 @@
           </ul>
         </nav>
         <div class="flex items-center h-full py-2.5 ml-auto">
-          <profile-image v-if="isLoggedIn" data-test="profile-image" />
+          <profile-image v-if="$store.isLoggedIn" data-test="profile-image" />
 
           <action-button
             v-else
@@ -40,7 +38,7 @@
           />
         </div>
       </div>
-      <the-subnav v-if="isLoggedIn" data-test="subnav" />
+      <the-subnav v-if="$store.isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
@@ -67,21 +65,19 @@ export default {
         { text: "Students", url: "/" },
         { text: "Jobs", url: "/job/results" },
       ],
-      isLoggedIn: false,
-      loginText: "Sign in",
     };
   },
   computed: {
     headerHightClass() {
       return {
-        "h-16": !this.isLoggedIn,
-        "h-32": this.isLoggedIn,
+        "h-16": !this.$store.isLoggedIn,
+        "h-32": this.$store.isLoggedIn,
       };
     },
   },
   methods: {
     signIn() {
-      this.isLoggedIn = true;
+      this.$store.isLoggedIn = true;
     },
   },
 };
