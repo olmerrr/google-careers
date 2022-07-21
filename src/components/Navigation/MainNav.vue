@@ -27,24 +27,24 @@
           </ul>
         </nav>
         <div class="flex items-center h-full py-2.5 ml-auto">
-          <profile-image v-if="userIsLoggedIn" data-test="profile-image" />
+          <profile-image v-if="isLoggedIn" data-test="profile-image" />
 
           <action-button
             v-else
             data-test="login-button"
             text="Sign in"
             type="primary"
-            @click="signIn"
+            @click="LOGIN_USER"
           />
         </div>
       </div>
-      <the-subnav v-if="userIsLoggedIn" data-test="subnav" />
+      <the-subnav v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 import { LOGIN_USER } from "@/store";
 
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
@@ -73,21 +73,18 @@ export default {
   computed: {
     headerHightClass() {
       return {
-        "h-16": !this.userIsLoggedIn,
-        "h-32": this.userIsLoggedIn,
+        "h-16": !this.isLoggedIn,
+        "h-32": this.isLoggedIn,
       };
     },
-    ...mapState(["userIsLoggedIn"]),
-    // ...mapState({
-    //   userIsLoggedIn: "isLoggedIn",
-    //   // the same
-    //   // isLoggedIn: (state) => state.isLoggedIn,
-    // }),
+    ...mapState(["isLoggedIn"]),
   },
   methods: {
-    signIn() {
-      this.$store.commit(LOGIN_USER);
-    },
+    ...mapMutations([LOGIN_USER]),
+    // the same
+    // LOGIN_USER() {
+    //   this.$store.commit(LOGIN_USER);
+    // },
   },
 };
 </script>
