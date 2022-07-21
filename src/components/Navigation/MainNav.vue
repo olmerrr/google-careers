@@ -27,7 +27,7 @@
           </ul>
         </nav>
         <div class="flex items-center h-full py-2.5 ml-auto">
-          <profile-image v-if="isLoggedIn" data-test="profile-image" />
+          <profile-image v-if="userIsLoggedIn" data-test="profile-image" />
 
           <action-button
             v-else
@@ -38,12 +38,13 @@
           />
         </div>
       </div>
-      <the-subnav v-if="isLoggedIn" data-test="subnav" />
+      <the-subnav v-if="userIsLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
 
 <script>
+import { mapState } from "vuex";
 import { LOGIN_USER } from "@/store";
 
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
@@ -72,13 +73,16 @@ export default {
   computed: {
     headerHightClass() {
       return {
-        "h-16": !this.isLoggedIn,
-        "h-32": this.isLoggedIn,
+        "h-16": !this.userIsLoggedIn,
+        "h-32": this.userIsLoggedIn,
       };
     },
-    isLoggedIn() {
-      return this.$store.state.isLoggedIn;
-    },
+    ...mapState(["userIsLoggedIn"]),
+    // ...mapState({
+    //   userIsLoggedIn: "isLoggedIn",
+    //   // the same
+    //   // isLoggedIn: (state) => state.isLoggedIn,
+    // }),
   },
   methods: {
     signIn() {
