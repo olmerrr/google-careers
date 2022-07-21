@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import { LOGIN_USER } from "@/store";
+
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "./ProfileImage.vue";
@@ -80,7 +82,7 @@ export default {
   },
   methods: {
     signIn() {
-      this.$store.commit("LOGIN_USER");
+      this.$store.commit(LOGIN_USER);
     },
   },
 };
