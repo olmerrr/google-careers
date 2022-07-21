@@ -27,7 +27,7 @@
           </ul>
         </nav>
         <div class="flex items-center h-full py-2.5 ml-auto">
-          <profile-image v-if="$store.isLoggedIn" data-test="profile-image" />
+          <profile-image v-if="isLoggedIn" data-test="profile-image" />
 
           <action-button
             v-else
@@ -38,7 +38,7 @@
           />
         </div>
       </div>
-      <the-subnav v-if="$store.isLoggedIn" data-test="subnav" />
+      <the-subnav v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
@@ -70,14 +70,17 @@ export default {
   computed: {
     headerHightClass() {
       return {
-        "h-16": !this.$store.isLoggedIn,
-        "h-32": this.$store.isLoggedIn,
+        "h-16": !this.isLoggedIn,
+        "h-32": this.isLoggedIn,
       };
+    },
+    isLoggedIn() {
+      return this.$store.state.isLoggedIn;
     },
   },
   methods: {
     signIn() {
-      this.$store.isLoggedIn = true;
+      this.$store.commit("LOGIN_USER");
     },
   },
 };
