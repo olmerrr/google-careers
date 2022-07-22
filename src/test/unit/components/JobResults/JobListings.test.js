@@ -9,6 +9,13 @@ describe("JobListings", () => {
       ...queryParams,
     },
   });
+  const createStore = (config = {}) => ({
+    state: {
+      jobs: Array(15).fill({}),
+    },
+    dispatch: jest.fn(),
+    ...config,
+  });
 
   const createConfig = ($route, $store) => ({
     global: {
@@ -25,12 +32,12 @@ describe("JobListings", () => {
   it("creates a job list for a maxium 10 jobs", async () => {
     const queryParams = { page: "1" };
     const $route = createRoute(queryParams);
-    const $store = {
+    const numbersOfJobsInStore = 15;
+    const $store = createStore({
       state: {
-        jobs: Array(15).fill({}),
+        jobs: Array(numbersOfJobsInStore).fill({}),
       },
-      dispatch: jest.fn(),
-    };
+    });
     const wrapper = shallowMount(JobListings, createConfig($route, $store));
     await flushPromises();
     const jobListings = wrapper.findAll("[data-test='job-listing']");
@@ -40,7 +47,8 @@ describe("JobListings", () => {
     it("displays page number 1", () => {
       const queryParams = { page: undefined };
       const $route = createRoute(queryParams);
-      const wrapper = shallowMount(JobListings, createConfig($route));
+      const $store = createStore();
+      const wrapper = shallowMount(JobListings, createConfig($route, $store));
       expect(wrapper.text()).toMatch("Page 1");
     });
   });
@@ -48,7 +56,8 @@ describe("JobListings", () => {
     it("displays page number", () => {
       const queryParams = { page: "3" };
       const $route = createRoute(queryParams);
-      const wrapper = shallowMount(JobListings, createConfig($route));
+      const $store = createStore();
+      const wrapper = shallowMount(JobListings, createConfig($route, $store));
       expect(wrapper.text()).toMatch("Page 3");
     });
   });
@@ -57,7 +66,8 @@ describe("JobListings", () => {
     it("does not show link to previous page", () => {
       const queryParams = { page: "1" };
       const $route = createRoute(queryParams);
-      const wrapper = shallowMount(JobListings, createConfig($route));
+      const $store = createStore();
+      const wrapper = shallowMount(JobListings, createConfig($route, $store));
       const previousPage = wrapper.find("[data-test='previous-page-link']");
       expect(previousPage.exists()).toBe(false);
     });
@@ -65,7 +75,12 @@ describe("JobListings", () => {
     it("shows link to next page", async () => {
       const queryParams = { page: "1" };
       const $route = createRoute(queryParams);
-      const wrapper = shallowMount(JobListings, createConfig($route));
+      const $store = createStore({
+        state: {
+          jobs: Array(15).fill({}),
+        },
+      });
+      const wrapper = shallowMount(JobListings, createConfig($route, $store));
       await flushPromises();
       const nextPage = wrapper.find("[data-test='next-page-link']");
       expect(nextPage.exists()).toBe(true);
@@ -75,7 +90,12 @@ describe("JobListings", () => {
     it("does not show link to next page", async () => {
       const queryParams = { page: "2" };
       const $route = createRoute(queryParams);
-      const wrapper = shallowMount(JobListings, createConfig($route));
+      const $store = createStore({
+        state: {
+          jobs: Array(15).fill({}),
+        },
+      });
+      const wrapper = shallowMount(JobListings, createConfig($route, $store));
       await flushPromises();
       const nextPage = wrapper.find("[data-test='next-page-link']");
       expect(nextPage.exists()).toBe(false);
@@ -84,7 +104,12 @@ describe("JobListings", () => {
     it("link to previous page", async () => {
       const queryParams = { page: "2" };
       const $route = createRoute(queryParams);
-      const wrapper = shallowMount(JobListings, createConfig($route));
+      const $store = createStore({
+        state: {
+          jobs: Array(15).fill({}),
+        },
+      });
+      const wrapper = shallowMount(JobListings, createConfig($route, $store));
       await flushPromises();
       const previousPage = wrapper.find("[data-test='previous-page-link']");
       expect(previousPage.exists()).toBe(true);
