@@ -81,10 +81,6 @@ export default {
   },
   methods: {
     ...mapMutations([LOGIN_USER]),
-    // the same
-    // LOGIN_USER() {
-    //   this.$store.commit(LOGIN_USER);
-    // },
   },
 };
 </script>
