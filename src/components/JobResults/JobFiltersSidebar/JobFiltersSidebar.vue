@@ -9,7 +9,10 @@
           <action-button text="Clear Filters" type="secondary" />
         </div>
       </div>
-      <the-accordion />
+      <the-accordion>
+        <!-- / -->
+        <h2>hello slot</h2>
+      </the-accordion>
     </section>
   </div>
 </template>

@@ -7,7 +7,11 @@
       <h3 class="text-base font-semibold">Organizations</h3>
       <font-awesome-icon :icon="caretIcon" />
     </div>
-    <div v-if="isOpen" class="w-full mt-5">Child</div>
+    <template v-if="isOpen">
+      <section class="w-full mt-5 text-left">
+        <slot></slot>
+      </section>
+    </template>
   </div>
 </template>
 
