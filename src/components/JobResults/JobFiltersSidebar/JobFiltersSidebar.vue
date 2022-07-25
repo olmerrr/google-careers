@@ -9,6 +9,7 @@
           <action-button text="Clear Filters" type="secondary" />
         </div>
       </div>
+      <the-accordion header="Degree" />
       <the-accordion header="Jobs types">
         <p>Placeholder</p>
       </the-accordion>

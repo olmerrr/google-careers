@@ -10,7 +10,9 @@
     </div>
     <template v-if="isOpen">
       <section class="w-full mt-5 text-left">
-        <slot></slot>
+        <slot>
+          <p>Whoops, somebody forgot to populate me</p>
+        </slot>
       </section>
     </template>
   </div>
