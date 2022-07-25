@@ -9,9 +9,32 @@
           <action-button text="Clear Filters" type="secondary" />
         </div>
       </div>
-      <the-accordion>
-        <!-- / -->
-        <h2>hello slot</h2>
+      <the-accordion header="Jobs types">
+        <p>Placeholder</p>
+      </the-accordion>
+      <the-accordion header="Organizations">
+        <div class="mt-5">
+          <fieldset>
+            <ul class="flex flex-row flex-wrap">
+              <li class="w-1/2 h-8">
+                <input id="VueTube" type="checkbox" class="mr-3" />
+                <label for="VueTube">VueTube</label>
+              </li>
+              <li class="w-1/2 h-8">
+                <input id="Between Vue and Me" type="checkbox" class="mr-3" />
+                <label for="Between Vue and Me">Between Vue</label>
+              </li>
+              <li class="w-1/2 h-8">
+                <input id="Et Vue Brute" type="checkbox" class="mr-3" />
+                <label for="Et Vue Brute">Et Vue Brute</label>
+              </li>
+              <li class="w-1/2 h-8">
+                <input id="Vue and Half Men" type="checkbox" class="mr-3" />
+                <label for="Vue and Half Men">Vue and Half Men</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
       </the-accordion>
     </section>
   </div>
