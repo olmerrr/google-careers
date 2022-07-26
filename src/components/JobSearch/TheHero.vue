@@ -11,7 +11,7 @@
           <img
             src="@/assets/hero-img.jpg"
             alt="hero-img"
-            class="h-80 w-80 object-contain"
+            class="h-80 w-80 rounded-full"
           />
         </div>
         <div class="col-start-12 col-span-1"></div>
