@@ -35,6 +35,15 @@ describe("mutations", () => {
       expect(state).toEqual({ jobs: ["Job 1", "Job 2"] });
     });
   });
+  describe("ADD_SELECTED_ORGANIZATIONS", () => {
+    it("updates organizations that user has chosen to filter jobs by", () => {
+      const state = {
+        selectedOrganizations: [],
+      };
+      mutations.ADD_SELECTED_ORGANIZATIONS(state, ["Org1", "Org2"]);
+      expect(state).toEqual({ selectedOrganizations: ["Org1", "Org2"] });
+    });
+  });
 });
 
 describe("getters", () => {
