@@ -8,8 +8,8 @@
             :key="organization"
             class="w-1/2 h-8"
           >
-            <input id="organization" type="checkbox" class="mr-3" />
-            <label for="organization">{{ organization }}</label>
+            <input :id="organization" type="checkbox" class="mr-3" />
+            <label :for="organization">{{ organization }}</label>
           </li>
         </ul>
       </fieldset>
