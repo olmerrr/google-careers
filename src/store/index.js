@@ -25,10 +25,8 @@ export const mutations = {
 export const getters = {
   [UNIQUE_ORGANIZATIONS](state) {
     const uniqueOrganizations = new Set();
-    state.jobs.forEach((job) => {
-      uniqueOrganizations.add(job.organization);
-      return uniqueOrganizations;
-    });
+    state.jobs.forEach((job) => uniqueOrganizations.add(job.organization));
+    return uniqueOrganizations;
   },
 };
 
