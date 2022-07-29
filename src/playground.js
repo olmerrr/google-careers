@@ -23,3 +23,15 @@
 // const arr = ['apple', 'banana', 'apple'];
 // const unicArr = new Set(arr)
 // console.log(unicArr);
+// const numbers = [1, 3, 5, 6, 7, 4, 2, 8, 11];
+// console.log(numbers.filter((number) => number > 6));
+// filter - return true/false
+
+const jobs = [
+  { title: "Angular Dev", organization: "Microsoft" },
+  { title: "Vue Dev", organization: "Google" },
+  { title: "React Dev", organization: "Faceboock" },
+];
+
+const chosenSpecialist = jobs.filter((job) => job.organization === "Google");
+console.log(chosenSpecialist);
