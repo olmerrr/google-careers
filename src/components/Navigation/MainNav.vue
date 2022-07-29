@@ -45,7 +45,7 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
-import { LOGIN_USER } from "@/store";
+import { LOGIN_USER } from "@/store/constants";
 
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import ActionButton from "@/components/Shared/ActionButton.vue";
