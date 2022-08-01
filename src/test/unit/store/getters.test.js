@@ -62,4 +62,40 @@ describe("getters", () => {
       expect(result).toEqual(new Set(["Full-time", "Temporary"]));
     });
   });
+
+  describe("FILTERED_JOBS_BY_JOB_TYPES", () => {
+    it("identifies jobs that are associated with the given job types", () => {
+      const state = {
+        jobs: [
+          { jobType: "Full-time" },
+          { jobType: "Temporary" },
+          { jobType: "Part-time" },
+        ],
+        selectedJobTypes: ["Full-time", "Part-time"],
+      };
+      const filteredJobs = getters.FILTERED_JOBS_BY_JOB_TYPES(state);
+      expect(filteredJobs).toEqual([
+        { jobType: "Full-time" },
+        { jobType: "Part-time" },
+      ]);
+    });
+    describe("when the user has not selected any job types", () => {
+      it("return all jobs", () => {
+        const state = {
+          jobs: [
+            { jobType: "Full-time" },
+            { jobType: "Temporary" },
+            { jobType: "Part-time" },
+          ],
+          selectedJobTypes: [],
+        };
+        const filteredJobs = getters.FILTERED_JOBS_BY_JOB_TYPES(state);
+        expect(filteredJobs).toEqual([
+          { jobType: "Full-time" },
+          { jobType: "Temporary" },
+          { jobType: "Part-time" },
+        ]);
+      });
+    });
+  });
 });
