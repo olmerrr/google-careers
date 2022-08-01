@@ -22,7 +22,7 @@ describe("TheSubnav", () => {
       const routeName = "JobResults";
       const $store = {
         getters: {
-          FILTERED_JOBS_BY_ORGANIZATIONS: [{ id: 1 }, { id: 2 }],
+          FILTERED_JOBS: [{ id: 1 }, { id: 2 }],
         },
       };
       const wrapper = mount(TheSubnav, createConfig(routeName, $store));
