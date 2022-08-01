@@ -1,33 +1,39 @@
 import { mount } from "@vue/test-utils";
-import TheSubnav from "@/components/Navigation/TheSubnav.vue";
+
+import TheSubnav from "@/components/Navigation/TheSubnav";
 
 describe("TheSubnav", () => {
   const createConfig = (routeName, $store = {}) => ({
     global: {
       mocks: {
-        $route: { name: routeName },
+        $route: {
+          name: routeName,
+        },
+        $store,
       },
-      $store,
       stubs: {
         FontAwesomeIcon: true,
       },
     },
   });
-  describe("when user on job page", () => {
+
+  describe("when user is on job page", () => {
     it("displays job count", () => {
-      const rounteName = "JobResults";
+      const routeName = "JobResults";
       const $store = {
-        getters: { FILTERED_JOBS_BY_ORGANIZATIONS: [{ id: 1 }, { id: 2 }] },
+        getters: {
+          FILTERED_JOBS_BY_ORGANIZATIONS: [{ id: 1 }, { id: 2 }],
+        },
       };
-      const wrapper = mount(TheSubnav, createConfig(rounteName, $store));
+      const wrapper = mount(TheSubnav, createConfig(routeName, $store));
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.text()).toMatch("2 jobs matched");
     });
   });
-  describe("when user not on job page", () => {
-    it("does not display job count", () => {
-      const routeName = "Home";
 
+  describe("when user is not on jobs page", () => {
+    it("does NOT display job count", () => {
+      const routeName = "Home";
       const wrapper = mount(TheSubnav, createConfig(routeName));
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.exists()).toBe(false);
