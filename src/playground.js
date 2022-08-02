@@ -33,5 +33,39 @@ const jobs = [
   { title: "React Dev", organization: "Faceboock" },
 ];
 
-const chosenSpecialist = jobs.filter((job) => job.organization === "Google");
-console.log(chosenSpecialist);
+// const chosenSpecialist = jobs.filter((job) => job.organization === "Google");
+// console.log(chosenSpecialist);
+
+// reactive
+// const { ref, computed } = require("vue");
+
+// let a = ref(1);
+// let b = ref(4);
+
+// console.log(a.value);
+// console.log(b.value);
+// let c = computed(() => a.value + b.value);
+// console.log(c.value);
+
+// more reactive
+const { computed, reactive, toRefs } = require("vue");
+// const name = ref("Yaroslav");
+// const title = computed(() => name.value + " the Great");
+// name.value = "Max Payne";
+// console.log(title.value);
+
+const person = reactive({
+  firstName: "Yaroslav",
+  lastName: "Dombrovskiy",
+});
+
+const { firstName, lastName } = toRefs(person);
+
+let title = computed(() => `${firstName.value} ${lastName.value} the Great!`);
+const titleLength = computed(() => title.value.length);
+
+// console.log(title.value);
+// console.log(titleLength.value);
+
+const refPerson = toRefs(person);
+console.log(person.firstName);

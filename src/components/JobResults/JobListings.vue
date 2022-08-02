@@ -21,6 +21,7 @@
           data-test="previous-page-link"
           >Previous
         </router-link>
+
         <router-link
           v-if="nextPage"
           class="mx-3 text-sm font-semibold text-brand-blue-1"

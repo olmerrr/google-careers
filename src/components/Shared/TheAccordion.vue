@@ -21,27 +21,32 @@
 <script>
 export default {
   name: "TheAccordion",
-  props: {
-    header: {
-      type: String,
-      required: true,
-    },
+  setup() {
+    const header = "Cool Title";
+    return { header };
   },
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  computed: {
-    caretIcon() {
-      return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
-    },
-  },
-  methods: {
-    open() {
-      this.isOpen = !this.isOpen;
-    },
-  },
+
+  // props: {
+  //   header: {
+  //     type: String,
+  //     required: true,
+  //   },
+  // },
+  // data() {
+  //   return {
+  //     isOpen: false,
+  //   };
+  // },
+  // computed: {
+  //   caretIcon() {
+  //     return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
+  //   },
+  // },
+  // methods: {
+  //   open() {
+  //     this.isOpen = !this.isOpen;
+  //   },
+  // },
 };
 </script>
 
