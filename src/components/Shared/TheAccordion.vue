@@ -39,7 +39,7 @@ export default {
       isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"]
     );
 
-    return { open, isOpen, caretIcon };
+    return { isOpen, open, caretIcon };
   },
 };
 </script>
