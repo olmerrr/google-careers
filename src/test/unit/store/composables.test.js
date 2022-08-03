@@ -8,7 +8,7 @@ import {
 } from "@/store/composables";
 
 describe("composables", () => {
-  describe("useUniqueJobsTypes", () => {
+  describe("useUniqueJobTypes", () => {
     it("retrieves filtered jobs from store", () => {
       useStore.mockReturnValue({
         getters: {
