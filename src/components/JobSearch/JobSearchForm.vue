@@ -17,8 +17,8 @@
 
       <span
         class="flex items-center h-full px-3 border-l border-r border-brand-gray-3 bg-brand-gray-2"
-        >in</span
-      >
+        >in
+      </span>
 
       <div class="relative flex items-center flex-1 h-full pl-3">
         <label class="absolute left-0 -top-10">Where</label>
@@ -41,6 +41,9 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import TextInput from "@/components/Shared/TextInput.vue";
 
@@ -50,32 +53,56 @@ export default {
     ActionButton,
     TextInput,
   },
-  data() {
+  setup() {
+    const router = useRouter();
+    const role = ref("");
+    const location = ref("");
+
+    const updateRole = (payload) => (role.value = payload);
+    const updateLocation = (payload) => (location.value = payload);
+
+    const searchFormJob = () => {
+      if (
+        role.value &&
+        role.value.length &&
+        location.value &&
+        location.value.length
+      )
+        router.push({
+          name: "JobResults",
+          query: { role: role.value, location: location.value },
+        });
+    };
+
     return {
-      role: "",
-      location: "",
+      role,
+      location,
+      updateRole,
+      updateLocation,
+      searchFormJob,
     };
   },
-  methods: {
-    updateRole(payload) {
-      this.role = payload;
-    },
-    updateLocation(payload) {
-      this.location = payload;
-    },
-    searchFormJob() {
-      if (
-        this.role &&
-        this.role.length &&
-        this.location &&
-        this.location.length
-      )
-        this.$router.push({
-          name: "JobResults",
-          query: { role: this.role, location: this.location },
-        });
-    },
+  // data() {
+  //   return {
+  //     role: "",
+  //     location: "",
+  //   };
+  // },
+  // methods: {
+  //   updateRole(payload) {
+  //     this.role = payload;
+  //   },
+  //   updateLocation(payload) {
+  //     this.location = payload;
+  //   },
+  searchFormJob() {
+    if (this.role && this.role.length && this.location && this.location.length)
+      this.$router.push({
+        name: "JobResults",
+        query: { role: this.role, location: this.location },
+      });
   },
+  // },
 };
 </script>
 
