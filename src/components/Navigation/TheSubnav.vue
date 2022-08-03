@@ -17,9 +17,6 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
 
-// import { mapGetters } from "vuex";
-// import { FILTERED_JOBS } from "@/store/constants";
-
 export default {
   name: "TheSubnav",
   setup() {
@@ -33,11 +30,5 @@ export default {
       FILTERED_JOBS,
     };
   },
-  // computed: {
-  //   ...mapGetters([FILTERED_JOBS]),
-  //   onJobResultPage() {
-  //     return this.$route.name === "JobResults";
-  //   },
-  // },
 };
 </script>
