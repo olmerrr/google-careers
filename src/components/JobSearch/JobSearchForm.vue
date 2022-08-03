@@ -82,27 +82,6 @@ export default {
       searchFormJob,
     };
   },
-  // data() {
-  //   return {
-  //     role: "",
-  //     location: "",
-  //   };
-  // },
-  // methods: {
-  //   updateRole(payload) {
-  //     this.role = payload;
-  //   },
-  //   updateLocation(payload) {
-  //     this.location = payload;
-  //   },
-  searchFormJob() {
-    if (this.role && this.role.length && this.location && this.location.length)
-      this.$router.push({
-        name: "JobResults",
-        query: { role: this.role, location: this.location },
-      });
-  },
-  // },
 };
 </script>
 
