@@ -13,16 +13,31 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { FILTERED_JOBS } from "@/store/constants";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import { useStore } from "vuex";
+
+// import { mapGetters } from "vuex";
+// import { FILTERED_JOBS } from "@/store/constants";
 
 export default {
   name: "TheSubnav",
-  computed: {
-    ...mapGetters([FILTERED_JOBS]),
-    onJobResultPage() {
-      return this.$route.name === "JobResults";
-    },
+  setup() {
+    const store = useStore();
+    const FILTERED_JOBS = computed(() => store.getters.FILTERED_JOBS);
+    const route = useRoute();
+    const onJobResultPage = computed(() => route.name === "JobResults");
+
+    return {
+      onJobResultPage,
+      FILTERED_JOBS,
+    };
   },
+  // computed: {
+  //   ...mapGetters([FILTERED_JOBS]),
+  //   onJobResultPage() {
+  //     return this.$route.name === "JobResults";
+  //   },
+  // },
 };
 </script>
