@@ -29,16 +29,6 @@ export default {
 
     return { spotlights };
   },
-  // data() {
-  //   return {
-  //     spotlights: [],
-  //   };
-  // },
-  // async mounted() {
-  //   const baseUrl = process.env.VUE_APP_API_URL;
-  //   const response = await axios.get(`${baseUrl}/spotlights`);
-  //   this.spotlights = response.data;
-  // },
 };
 </script>
 
