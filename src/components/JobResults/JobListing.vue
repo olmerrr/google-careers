@@ -65,10 +65,5 @@ export default {
     const jobPageLink = computed(() => `/job/results/${props.job.id}`);
     return { jobPageLink };
   },
-  // computed: {
-  //   jobPageLink() {
-  //     return `/job/results/${this.job.id}`;
-  //   },
-  // },
 };
 </script>
