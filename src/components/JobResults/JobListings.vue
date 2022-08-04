@@ -37,10 +37,11 @@
 <script>
 import { onMounted, computed } from "vue";
 import { useStore } from "vuex";
-import { useRoute } from "vue-router";
 
 import { FETCH_JOBS } from "@/store/constants";
 import { useFilteredJobs } from "@/store/composables";
+import useCurrentPage from "@/composables/useCurrentPage";
+import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
 
 import JobListing from "./JobListing.vue";
 
@@ -49,28 +50,32 @@ export default {
   components: { JobListing },
   setup() {
     const store = useStore();
-    const route = useRoute();
-
     const fetchJobs = () => store.dispatch(FETCH_JOBS);
 
     onMounted(fetchJobs);
 
     const filteredJobs = useFilteredJobs();
-    const currentPage = computed(() =>
-      Number.parseInt(route.query.page || "1")
+
+    const currentPage = useCurrentPage();
+
+    const maxPage = computed(() => Math.ceil(filteredJobs.value.length / 10));
+
+    const { previousPage, nextPage } = usePreviousAndNextPages(
+      currentPage,
+      maxPage
     );
 
-    const previousPage = computed(() => {
-      const previousPage = currentPage.value - 1;
-      const firstPage = 1;
-      return previousPage >= firstPage ? previousPage : undefined;
-    });
+    // const previousPage = computed(() => {
+    //   const previousPage = currentPage.value - 1;
+    //   const firstPage = 1;
+    //   return previousPage >= firstPage ? previousPage : undefined;
+    // });
 
-    const nextPage = computed(() => {
-      const nextPage = currentPage.value + 1;
-      const maxPage = Math.ceil(filteredJobs.value.length / 10);
-      return nextPage <= maxPage ? nextPage : undefined;
-    });
+    // const nextPage = computed(() => {
+    //   const nextPage = currentPage.value + 1;
+    //   const maxPage = Math.ceil(filteredJobs.value.length / 10);
+    //   return nextPage <= maxPage ? nextPage : undefined;
+    // });
 
     const displayedJobs = computed(() => {
       const pageNumber = currentPage.value;
