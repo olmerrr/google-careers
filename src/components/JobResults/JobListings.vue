@@ -46,7 +46,7 @@ export default {
   name: "JobListings",
   components: { JobListing },
   setup() {
-    onMounted(useFetchJobsDispatch());
+    onMounted(useFetchJobsDispatch);
 
     const filteredJobs = useFilteredJobs();
 
