@@ -36,10 +36,7 @@
 
 <script>
 import { onMounted, computed } from "vue";
-import { useStore } from "vuex";
-
-import { FETCH_JOBS } from "@/store/constants";
-import { useFilteredJobs } from "@/store/composables";
+import { useFilteredJobs, useFetchJobsDispatch } from "@/store/composables";
 import useCurrentPage from "@/composables/useCurrentPage";
 import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
 
@@ -49,10 +46,7 @@ export default {
   name: "JobListings",
   components: { JobListing },
   setup() {
-    const store = useStore();
-    const fetchJobs = () => store.dispatch(FETCH_JOBS);
-
-    onMounted(fetchJobs);
+    onMounted(useFetchJobsDispatch());
 
     const filteredJobs = useFilteredJobs();
 
