@@ -65,18 +65,6 @@ export default {
       maxPage
     );
 
-    // const previousPage = computed(() => {
-    //   const previousPage = currentPage.value - 1;
-    //   const firstPage = 1;
-    //   return previousPage >= firstPage ? previousPage : undefined;
-    // });
-
-    // const nextPage = computed(() => {
-    //   const nextPage = currentPage.value + 1;
-    //   const maxPage = Math.ceil(filteredJobs.value.length / 10);
-    //   return nextPage <= maxPage ? nextPage : undefined;
-    // });
-
     const displayedJobs = computed(() => {
       const pageNumber = currentPage.value;
       const firstJobIndex = (pageNumber - 1) * 10;
