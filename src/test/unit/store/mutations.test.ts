@@ -1,11 +1,20 @@
+import { GlobalState } from "@/store/types";
+import state from "@/store/state";
 import mutations from "@/store/mutations";
 
 describe("mutations", () => {
+  const createState = (config: Partial<GlobalState>): GlobalState => {
+    const initialState = state();
+    return { ...initialState, ...config };
+  };
+
   describe("LOGIN_USER", () => {
     it("logs the user in", () => {
-      const state = { isLoggedIn: false };
-      mutations.LOGIN_USER(state);
-      expect(state).toEqual({ isLoggedIn: true });
+      // const state = { isLoggedIn: false } as GlobalState;
+      // const startingState = state();
+      const startingState = createState({ isLoggedIn: false });
+      mutations.LOGIN_USER(startingState);
+      expect(startingState.isLoggedIn).toBe(true);
     });
   });
   describe("RECEIVE_JOBS", () => {

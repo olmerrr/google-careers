@@ -61,8 +61,8 @@ const person = reactive({
 
 const { firstName, lastName } = toRefs(person);
 
-let title = computed(() => `${firstName.value} ${lastName.value} the Great!`);
-const titleLength = computed(() => title.value.length);
+// let title = computed(() => `${firstName.value} ${lastName.value} the Great!`);
+// const titleLength = computed(() => title.value.length);
 
 // console.log(title.value);
 // console.log(titleLength.value);
