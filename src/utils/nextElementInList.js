@@ -4,4 +4,5 @@ const nextElementInList = (list, value) => {
   const nextValue = list[nextValueIndex];
   return nextValue;
 };
+
 export default nextElementInList;

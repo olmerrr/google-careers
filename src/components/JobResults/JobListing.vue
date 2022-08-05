@@ -2,10 +2,19 @@
   <li class="mb-7">
     <router-link
       :to="jobPageLink"
-      class="block mx-auto bg-white border border-solid border-brand-gray-2 rounded hover:shadow-gray"
+      class="
+        block
+        mx-auto
+        bg-white
+        border border-solid border-brand-gray-2
+        rounded
+        hover:shadow-gray
+      "
     >
       <div class="pt-5 pb-2 mx-8 border-b border-solid border-brand-gray-2">
-        <h2 class="mb-2 text-2xl">{{ job.title }}</h2>
+        <h2 class="mb-2 text-2xl">
+          {{ job.title }}
+        </h2>
 
         <div class="flex flex-row align-middle">
           <div class="mr-5">
@@ -53,6 +62,7 @@
 
 <script>
 import { computed } from "vue";
+
 export default {
   name: "JobListing",
   props: {
@@ -62,7 +72,7 @@ export default {
     },
   },
   setup(props) {
-    const jobPageLink = computed(() => `/job/results/${props.job.id}`);
+    const jobPageLink = computed(() => `/jobs/results/${props.job.id}`);
     return { jobPageLink };
   },
 };

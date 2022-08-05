@@ -1,25 +1,32 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+const HomeView = () => import("@/views/HomeView.vue");
+const JobResultsView = () =>
+  import(/* webpackChunkName: "jobs" */ "@/views/JobResultsView.vue");
+const JobView = () =>
+  import(/* webpackChunkName: "jobs" */ "@/views/JobView.vue");
+const TeamsView = () => import("@/views/TeamsView.vue");
+
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("@/views/HomeView.vue"),
+    component: HomeView,
   },
   {
-    path: "/job/results",
+    path: "/jobs/results",
     name: "JobResults",
-    component: () => import("@/views/JobResultsView.vue"),
+    component: JobResultsView,
   },
   {
-    path: "/job/results/:id",
+    path: "/jobs/results/:id",
     name: "JobListing",
-    component: () => import("@/views/JobView.vue"),
+    component: JobView,
   },
   {
     path: "/teams",
     name: "Teams",
-    component: () => import("@/views/TeamsView.vue"),
+    component: TeamsView,
   },
 ];
 

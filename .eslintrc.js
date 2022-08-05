@@ -12,6 +12,7 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "vue/multi-word-component-names": "off",
   },
 
   overrides: [
@@ -26,7 +27,7 @@ module.exports = {
   extends: [
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    "plugin:prettier/recommended",
+    "prettier",
     "@vue/typescript",
   ],
 };

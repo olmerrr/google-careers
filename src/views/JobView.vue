@@ -1,8 +1,5 @@
 <template>
-  <h4>
-    Job Viev for id:
-    <span>{{ currentJobId }}</span>
-  </h4>
+  <div>Job Page for job {{ currentJobId }}</div>
 </template>
 
 <script>
@@ -15,5 +12,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

@@ -1,11 +1,5 @@
 <template>
-  <section>
-    <img
-      class="w-8 h-8 object-contain rounded-3xl"
-      :src="imageLink"
-      alt="img"
-    />
-  </section>
+  <img :src="imageLink" class="w-8 h-8 object-contain rounded-3xl" />
 </template>
 
 <script>
@@ -14,7 +8,7 @@ export default {
   data() {
     return {
       imageLink:
-        "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-128.png",
+        "https://www.pngitem.com/pimgs/m/487-4876417_link-head-png-toon-link-face-png-transparent.png",
     };
   },
 };

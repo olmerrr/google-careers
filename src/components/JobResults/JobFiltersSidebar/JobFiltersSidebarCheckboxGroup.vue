@@ -1,5 +1,5 @@
 <template>
-  <the-accordion :header="header">
+  <accordion :header="header">
     <div class="mt-5">
       <fieldset>
         <ul class="flex flex-row flex-wrap">
@@ -18,21 +18,20 @@
         </ul>
       </fieldset>
     </div>
-  </the-accordion>
+  </accordion>
 </template>
 
 <script>
+import { ref } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 
-import { ref } from "vue";
-
-import TheAccordion from "@/components/Shared/TheAccordion.vue";
+import Accordion from "@/components/Shared/Accordion.vue";
 
 export default {
   name: "JobFiltersSidebarCheckboxGroup",
   components: {
-    TheAccordion,
+    Accordion,
   },
   props: {
     header: {
@@ -63,5 +62,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

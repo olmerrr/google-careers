@@ -12,13 +12,12 @@ export default {
   props: {
     text: {
       type: String,
-      default: "",
       required: true,
     },
     type: {
       type: String,
-      default: "primary",
       required: false,
+      default: "primary",
       validator(value) {
         return ["primary", "secondary"].includes(value);
       },
@@ -26,31 +25,24 @@ export default {
   },
   setup(props) {
     const { type } = toRefs(props);
+
     const buttonClass = computed(() => {
       return {
         [type.value]: true,
       };
     });
-
     return { buttonClass };
   },
-  // computed: {
-  //   buttonClass() {
-  //     return {
-  //       [this.type]: true,
-  //     };
-  //   },
-  // },
 };
 </script>
 
 <style scoped>
 button {
-  @apply px-5 py-3  font-medium;
+  @apply px-5 py-3 font-medium;
 }
 
 .primary {
-  @apply text-white rounded bg-brand-blue-1 hover:shadow-blue;
+  @apply rounded text-white border-0 bg-brand-blue-1 hover:shadow-blue;
 }
 
 .secondary {

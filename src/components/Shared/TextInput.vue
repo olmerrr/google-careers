@@ -1,8 +1,8 @@
 <template>
   <input
     type="text"
-    :value="modelValue"
     :placeholder="placeholder"
+    :value="modelValue"
     class="w-full text-lg font-normal focus:outline-none"
     @input="handleInput"
   />
@@ -30,5 +30,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

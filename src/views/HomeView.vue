@@ -1,14 +1,14 @@
 <template>
-  <the-hero />
+  <hero />
 </template>
 
 <script>
-import TheHero from "@/components/JobSearch/TheHero.vue";
+import Hero from "@/components/JobSearch/Hero.vue";
 
 export default {
   name: "HomeView",
   components: {
-    TheHero,
+    Hero,
   },
 };
 </script>
