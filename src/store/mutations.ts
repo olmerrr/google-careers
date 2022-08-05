@@ -1,12 +1,11 @@
+import { GlobalState } from "@/store/types";
+import { Job } from "@/api/types";
 import {
   LOGIN_USER,
   RECEIVE_JOBS,
   ADD_SELECTED_ORGANIZATIONS,
   ADD_SELECTED_JOB_TYPES,
 } from "@/store/constants";
-
-import { Job } from "@/api/types";
-import { GlobalState } from "@/store/types";
 
 const mutations = {
   [LOGIN_USER](state: GlobalState) {
