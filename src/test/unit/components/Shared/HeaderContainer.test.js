@@ -8,12 +8,12 @@ describe("HeaderContainer", () => {
         name: "<h2>Some title</h2>",
       },
     });
-    expect(wrapper.text()).toMatch("Some title");
+    expect(wrapper.text()).toMatch("Sample titleSample subtitle");
   });
   it("allows parent cmp to provide subtitle content", () => {
     const wrapper = mount(HeaderContainer, {
       slots: {
-        subtitle: "<h3>Sample subtitle</h3>",
+        subtitle: "<h3>Sample titleSample subtitle</h3>",
       },
     });
     expect(wrapper.text()).toMatch("Sample subtitle");
