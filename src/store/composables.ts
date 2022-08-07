@@ -10,7 +10,7 @@ import {
 
 import { Job } from "@/api/types";
 
-/* GETTERS */
+// getters
 export const useFilteredJobs = () => {
   const store = useStore();
   return computed<Job[]>(() => store.getters[FILTERED_JOBS]);
@@ -26,7 +26,7 @@ export const useUniqueOrganizations = () => {
   return computed<Set<string>>(() => store.getters[UNIQUE_ORGANIZATIONS]);
 };
 
-/* ACTIONS */
+// actions
 export const useFetchJobsDispatch = () => {
   const store = useStore();
   store.dispatch(FETCH_JOBS);
