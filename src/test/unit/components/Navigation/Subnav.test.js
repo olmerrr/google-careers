@@ -6,9 +6,9 @@ jest.mock("@/store/composables");
 import useConfirmRoute from "@/composables/useConfirmRoute";
 jest.mock("@/composables/useConfirmRoute");
 
-import TheSubnav from "@/components/Navigation/TheSubnav";
+import Subnav from "@/components/Navigation/Subnav";
 
-describe("TheSubnav", () => {
+describe("Subnav", () => {
   const createConfig = () => ({
     global: {
       stubs: {
@@ -23,7 +23,7 @@ describe("TheSubnav", () => {
 
       useFilteredJobs.mockReturnValue([{ id: 1 }, { id: 2 }]);
 
-      const wrapper = mount(TheSubnav, createConfig());
+      const wrapper = mount(Subnav, createConfig());
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.text()).toMatch("2 jobs matched");
     });
@@ -34,7 +34,7 @@ describe("TheSubnav", () => {
       useConfirmRoute.mockReturnValue(false);
 
       useFilteredJobs.mockReturnValue([]);
-      const wrapper = mount(TheSubnav, createConfig());
+      const wrapper = mount(Subnav, createConfig());
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.exists()).toBe(false);
     });

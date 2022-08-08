@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659963624348" clover="3.2.0">
-  <project timestamp="1659963624349" name="All files">
-    <metrics statements="136" coveredstatements="136" conditionals="13" coveredconditionals="12" methods="53" coveredmethods="53" elements="202" coveredelements="201" complexity="0" loc="136" ncloc="136" packages="9" files="20" classes="20"/>
+<coverage generated="1659965503764" clover="3.2.0">
+  <project timestamp="1659965503764" name="All files">
+    <metrics statements="144" coveredstatements="144" conditionals="13" coveredconditionals="12" methods="54" coveredmethods="54" elements="211" coveredelements="210" complexity="0" loc="144" ncloc="144" packages="9" files="21" classes="21"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
@@ -30,7 +30,7 @@
       </file>
     </package>
     <package name="src.components.Navigation">
-      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="MainNav.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Navigation\MainNav.vue">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="47" count="2" type="stmt"/>
@@ -49,9 +49,19 @@
         <line num="7" count="4" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
       </file>
+      <file name="Subnav.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Navigation\Subnav.vue">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+      </file>
     </package>
     <package name="src.components.Shared">
-      <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
       <file name="Accordion.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\Accordion.vue">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="21" count="3" type="stmt"/>
@@ -74,8 +84,9 @@
         <line num="34" count="6" type="stmt"/>
       </file>
       <file name="HeaderContainer.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\HeaderContainer.vue">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
       </file>
       <file name="TextInput.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\TextInput.vue">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
