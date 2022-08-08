@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659965939156" clover="3.2.0">
-  <project timestamp="1659965939156" name="All files">
-    <metrics statements="144" coveredstatements="144" conditionals="13" coveredconditionals="12" methods="54" coveredmethods="54" elements="211" coveredelements="210" complexity="0" loc="144" ncloc="144" packages="9" files="21" classes="21"/>
+<coverage generated="1659972865706" clover="3.2.0">
+  <project timestamp="1659972865706" name="All files">
+    <metrics statements="151" coveredstatements="151" conditionals="13" coveredconditionals="12" methods="54" coveredmethods="54" elements="218" coveredelements="217" complexity="0" loc="151" ncloc="151" packages="9" files="21" classes="21"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
@@ -97,18 +97,25 @@
       </file>
     </package>
     <package name="src.composables">
-      <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
-      <file name="useConfirmRoute.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\useConfirmRoute.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
+      <file name="useConfirmRoute.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\useConfirmRoute.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
       </file>
-      <file name="useCurrentPage.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\useCurrentPage.js">
-        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="useCurrentPage.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\useCurrentPage.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
-        <line num="6" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="4" type="stmt"/>
       </file>
       <file name="usePreviousAndNextPages.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\usePreviousAndNextPages.js">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
