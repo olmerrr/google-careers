@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659885477258" clover="3.2.0">
-  <project timestamp="1659885477258" name="All files">
-    <metrics statements="98" coveredstatements="98" conditionals="11" coveredconditionals="10" methods="39" coveredmethods="39" elements="148" coveredelements="147" complexity="0" loc="98" ncloc="98" packages="8" files="16" classes="16"/>
+<coverage generated="1659949230789" clover="3.2.0">
+  <project timestamp="1659949230789" name="All files">
+    <metrics statements="99" coveredstatements="99" conditionals="11" coveredconditionals="10" methods="39" coveredmethods="39" elements="149" coveredelements="148" complexity="0" loc="99" ncloc="99" packages="8" files="16" classes="16"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
@@ -13,11 +13,12 @@
       </file>
     </package>
     <package name="src.components.Navigation">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="ProfileImage.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Navigation\ProfileImage.vue">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Shared">
