@@ -2,11 +2,11 @@ import { mount, flushPromises } from "@vue/test-utils";
 import axios from "axios";
 jest.mock("axios");
 
-import TheSpotlight from "@/components/JobSearch/TheSpotlight.vue";
-
+import Spotlight from "@/components/JobSearch/Spotlight.vue";
+const axiosGetMock = axios.get as jest.Mock;
 describe("Spotlight", () => {
   const mockSpotlightResponse = (data = {}) => {
-    axios.get.mockResolvedValue({
+    axiosGetMock.mockResolvedValue({
       data: [
         {
           img: "Some image",
@@ -20,7 +20,7 @@ describe("Spotlight", () => {
 
   it("provides img attribute to parent component", async () => {
     mockSpotlightResponse({ img: "Some image" });
-    const wrapper = mount(TheSpotlight, {
+    const wrapper = mount(Spotlight, {
       slots: {
         default: `<template #default="slotProps">
           <h1>{{ slotProps.img }}</h1>
@@ -34,7 +34,7 @@ describe("Spotlight", () => {
 
   it("provides title attribute to parent component", async () => {
     mockSpotlightResponse({ title: "Some title" });
-    const wrapper = mount(TheSpotlight, {
+    const wrapper = mount(Spotlight, {
       slots: {
         default: `<template #default="slotProps">
           <h1>{{ slotProps.title }}</h1>
@@ -48,7 +48,7 @@ describe("Spotlight", () => {
 
   it("provides description attribute to parent component", async () => {
     mockSpotlightResponse({ description: "Some description" });
-    const wrapper = mount(TheSpotlight, {
+    const wrapper = mount(Spotlight, {
       slots: {
         default: `<template #default="slotProps">
           <h1>{{ slotProps.description }}</h1>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659972865706" clover="3.2.0">
-  <project timestamp="1659972865706" name="All files">
-    <metrics statements="151" coveredstatements="151" conditionals="13" coveredconditionals="12" methods="54" coveredmethods="54" elements="218" coveredelements="217" complexity="0" loc="151" ncloc="151" packages="9" files="21" classes="21"/>
+<coverage generated="1659975012278" clover="3.2.0">
+  <project timestamp="1659975012278" name="All files">
+    <metrics statements="165" coveredstatements="165" conditionals="13" coveredconditionals="12" methods="56" coveredmethods="56" elements="234" coveredelements="233" complexity="0" loc="165" ncloc="165" packages="9" files="22" classes="22"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
@@ -13,7 +13,7 @@
       </file>
     </package>
     <package name="src.components.JobSearch">
-      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <file name="Headline.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobSearch\Headline.vue">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="16" count="2" type="stmt"/>
@@ -27,6 +27,21 @@
         <line num="51" count="8" type="stmt"/>
         <line num="52" count="6" type="stmt"/>
         <line num="53" count="6" type="stmt"/>
+      </file>
+      <file name="Spotlight.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobSearch\Spotlight.vue">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Navigation">
@@ -97,7 +112,7 @@
       </file>
     </package>
     <package name="src.composables">
-      <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
+      <metrics statements="24" coveredstatements="24" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
       <file name="useConfirmRoute.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\useConfirmRoute.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
@@ -117,17 +132,19 @@
         <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="4" type="stmt"/>
       </file>
-      <file name="usePreviousAndNextPages.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\usePreviousAndNextPages.js">
-        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="8" type="stmt"/>
+      <file name="usePreviousAndNextPages.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\composables\usePreviousAndNextPages.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.store">
