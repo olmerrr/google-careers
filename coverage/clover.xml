@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659955536775" clover="3.2.0">
-  <project timestamp="1659955536775" name="All files">
-    <metrics statements="119" coveredstatements="119" conditionals="11" coveredconditionals="10" methods="47" coveredmethods="47" elements="177" coveredelements="176" complexity="0" loc="119" ncloc="119" packages="9" files="18" classes="18"/>
+<coverage generated="1659956329191" clover="3.2.0">
+  <project timestamp="1659956329191" name="All files">
+    <metrics statements="127" coveredstatements="127" conditionals="13" coveredconditionals="12" methods="50" coveredmethods="50" elements="190" coveredelements="189" complexity="0" loc="127" ncloc="127" packages="9" files="19" classes="19"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
@@ -51,7 +51,18 @@
       </file>
     </package>
     <package name="src.components.Shared">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <file name="Accordion.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\Accordion.vue">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="39" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="8" type="stmt"/>
+      </file>
       <file name="HeaderContainer.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\HeaderContainer.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="11" count="2" type="stmt"/>
