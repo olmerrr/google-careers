@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659975012278" clover="3.2.0">
-  <project timestamp="1659975012278" name="All files">
-    <metrics statements="165" coveredstatements="165" conditionals="13" coveredconditionals="12" methods="56" coveredmethods="56" elements="234" coveredelements="233" complexity="0" loc="165" ncloc="165" packages="9" files="22" classes="22"/>
+<coverage generated="1659976572560" clover="3.2.0">
+  <project timestamp="1659976572560" name="All files">
+    <metrics statements="167" coveredstatements="167" conditionals="13" coveredconditionals="12" methods="56" coveredmethods="56" elements="236" coveredelements="235" complexity="0" loc="167" ncloc="167" packages="9" files="22" classes="22"/>
     <package name="src.api">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getJobs.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.components.JobSearch">
