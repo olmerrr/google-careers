@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659956329191" clover="3.2.0">
-  <project timestamp="1659956329191" name="All files">
-    <metrics statements="127" coveredstatements="127" conditionals="13" coveredconditionals="12" methods="50" coveredmethods="50" elements="190" coveredelements="189" complexity="0" loc="127" ncloc="127" packages="9" files="19" classes="19"/>
+<coverage generated="1659961860545" clover="3.2.0">
+  <project timestamp="1659961860545" name="All files">
+    <metrics statements="134" coveredstatements="134" conditionals="13" coveredconditionals="12" methods="53" coveredmethods="53" elements="200" coveredelements="199" complexity="0" loc="134" ncloc="134" packages="9" files="20" classes="20"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.js">
@@ -51,7 +51,7 @@
       </file>
     </package>
     <package name="src.components.Shared">
-      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
       <file name="Accordion.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\Accordion.vue">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="21" count="3" type="stmt"/>
@@ -62,6 +62,16 @@
         <line num="38" count="8" type="stmt"/>
         <line num="39" count="16" type="cond" truecount="2" falsecount="0"/>
         <line num="42" count="8" type="stmt"/>
+      </file>
+      <file name="ActionButton.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\ActionButton.vue">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="22" count="14" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
       </file>
       <file name="HeaderContainer.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\HeaderContainer.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
