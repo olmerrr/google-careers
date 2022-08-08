@@ -2,13 +2,7 @@
   <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed top-0 left-0 w-full h-16 bg-white">
       <div
-        class="
-          flex flex-nowrap
-          h-full
-          px-8
-          mx-auto
-          border-b border-solid border-brand-gray-1
-        "
+        class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
       >
         <router-link
           :to="{ name: 'Home' }"
@@ -49,7 +43,7 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 import { mapMutations, mapState } from "vuex";
 
 import ActionButton from "@/components/Shared/ActionButton.vue";
@@ -57,8 +51,8 @@ import ProfileImage from "@/components/Navigation/ProfileImage.vue";
 import Subnav from "@/components/Navigation/Subnav.vue";
 
 import { LOGIN_USER } from "@/store/constants";
-
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "MainNav",
   components: {
     ActionButton,
@@ -89,5 +83,5 @@ export default {
   methods: {
     ...mapMutations([LOGIN_USER]),
   },
-};
+});
 </script>

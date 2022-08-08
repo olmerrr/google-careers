@@ -1,8 +1,13 @@
+import { GlobalState } from "@/store/types";
 import { shallowMount, RouterLinkStub } from "@vue/test-utils";
 import MainNav from "@/components/Navigation/MainNav.vue";
 
 describe("MainNav", () => {
-  const createConfig = ($store) => ({
+  interface MockStore {
+    state: Partial<GlobalState>;
+  }
+
+  const createConfig = ($store: MockStore) => ({
     global: {
       mocks: {
         $store,
