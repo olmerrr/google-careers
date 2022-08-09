@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660059758760" clover="3.2.0">
-  <project timestamp="1660059758760" name="All files">
-    <metrics statements="230" coveredstatements="230" conditionals="13" coveredconditionals="12" methods="66" coveredmethods="65" elements="309" coveredelements="307" complexity="0" loc="230" ncloc="230" packages="11" files="28" classes="28"/>
+<coverage generated="1660061974158" clover="3.2.0">
+  <project timestamp="1660061974158" name="All files">
+    <metrics statements="231" coveredstatements="231" conditionals="13" coveredconditionals="12" methods="66" coveredmethods="65" elements="310" coveredelements="308" complexity="0" loc="231" ncloc="231" packages="11" files="28" classes="28"/>
     <package name="src.api">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.ts">
@@ -328,14 +328,15 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="nextElementInList.js" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\utils\nextElementInList.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="nextElementInList.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\utils\nextElementInList.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
       </file>
     </package>
     <package name="tests.unit.store">
