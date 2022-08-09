@@ -1,18 +1,13 @@
 import { mount, RouterLinkStub } from "@vue/test-utils";
 import JobListing from "@/components/JobResults/JobListing.vue";
+import { Job } from "@/api/types";
+import { createJob } from "../../store/utils";
 
 describe("JobListing", () => {
-  const createJobProps = (jobProps = {}) => ({
-    title: "Angular Developer",
-    organization: "Vue and Me",
-    location: ["Kiev"],
-    minimumQualifications: ["Development", "Testing"],
-    ...jobProps,
-  });
-  const createConfig = (jobProps) => ({
+  const createConfig = (job: Job) => ({
     props: {
       job: {
-        ...jobProps,
+        ...job,
       },
     },
     global: {
@@ -22,32 +17,32 @@ describe("JobListing", () => {
     },
   });
   it("renders job title", () => {
-    const jobProps = createJobProps({ title: "Angular Developer" });
-    const wrapper = mount(JobListing, createConfig(jobProps));
+    const job = createJob({ title: "Angular Developer" });
+    const wrapper = mount(JobListing, createConfig(job));
     expect(wrapper.text()).toMatch("Angular Developer");
   });
 
   it("renders job organization", () => {
-    const jobProps = createJobProps({ organization: "Vue and Me" });
-    const wrapper = mount(JobListing, createConfig(jobProps));
+    const job = createJob({ organization: "Vue and Me" });
+    const wrapper = mount(JobListing, createConfig(job));
     expect(wrapper.text()).toMatch("Vue and Me");
   });
 
   it("renders job location", () => {
-    const jobProps = createJobProps({ locations: ["Orlando", "Jacksonville"] });
-    const wrapper = mount(JobListing, createConfig(jobProps));
+    const job = createJob({ locations: ["Orlando", "Jacksonville"] });
+    const wrapper = mount(JobListing, createConfig(job));
     expect(wrapper.text()).toMatch("Orlando");
     expect(wrapper.text()).toMatch("Jacksonville");
   });
 
   it("renders job qualifications", () => {
-    const jobProps = createJobProps({
+    const job = createJob({
       minimumQualifications: [
         "Mesh granular deliverables, engineer enterprise convergence, and synergize B2C initiatives",
         "Morph bricks-and-clicks relationships, whiteboard one-to-one experiences, and innovate distributed schemas",
       ],
     });
-    const wrapper = mount(JobListing, createConfig(jobProps));
+    const wrapper = mount(JobListing, createConfig(job));
     expect(wrapper.text()).toMatch(
       "Mesh granular deliverables, engineer enterprise convergence, and synergize B2C initiatives"
     );
@@ -57,8 +52,8 @@ describe("JobListing", () => {
   });
 
   it("links to individual job's page", () => {
-    const jobProps = createJobProps({ id: 15 });
-    const wrapper = mount(JobListing, createConfig(jobProps));
+    const job = createJob({ id: 15 });
+    const wrapper = mount(JobListing, createConfig(job));
     const jobPageLink = wrapper.findComponent(RouterLinkStub);
     const toProp = jobPageLink.props("to");
     expect(toProp).toBe("/jobs/results/15");
