@@ -1,12 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      p-4
-      bg-white
-      border-r border-solid border-brand-gray-1
-      w-96
-    "
+    class="flex flex-col p-4 bg-white border-r border-solid border-brand-gray-1 w-96"
   >
     <section class="pb-5">
       <div class="flex flex-row justify-between">
@@ -22,18 +16,22 @@
         header="Job Types"
         :unique-values="uniqueJobTypes"
         :mutation="ADD_SELECTED_JOB_TYPES"
+        data-test="job-types-filter"
       />
 
       <job-filters-sidebar-checkbox-group
         header="Organizations"
         :unique-values="uniqueOrganizations"
         :mutation="ADD_SELECTED_ORGANIZATIONS"
+        data-test="organizations-filter"
       />
     </section>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "@vue/runtime-core";
+
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import Accordion from "@/components/Shared/Accordion.vue";
 import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
@@ -44,7 +42,7 @@ import {
   ADD_SELECTED_ORGANIZATIONS,
 } from "@/store/constants";
 
-export default {
+export default defineComponent({
   name: "JobFiltersSidebar",
   components: {
     ActionButton,
@@ -54,6 +52,7 @@ export default {
   setup() {
     const uniqueJobTypes = useUniqueJobTypes();
     const uniqueOrganizations = useUniqueOrganizations();
+
     return {
       uniqueJobTypes,
       uniqueOrganizations,
@@ -61,5 +60,5 @@ export default {
       ADD_SELECTED_ORGANIZATIONS,
     };
   },
-};
+});
 </script>
