@@ -21,7 +21,7 @@
     <spotlight class="flex flex-row justify-center pb-16">
       <template #default="{ img, title, description }">
         <router-link
-          to="/job/results"
+          to="/jobs/results"
           class="flex flex-col mx-5 border rounded-lg w-72 bg-brand-gray-2 h-96"
         >
           <img :src="img" class="object-contain" alt="img" />
@@ -34,7 +34,7 @@
             </p>
           </div>
           <router-link
-            to="/job/results"
+            to="/jobs/results"
             class="px-6 pb-4 text-sm text-brand-blue-1"
             >See jobs</router-link
           >
