@@ -1,8 +1,8 @@
 import { mount } from "@vue/test-utils";
 
-import TheAccordion from "@/components/Shared/TheAccordion.vue";
+import Accordion from "@/components/Shared/Accordion.vue";
 
-describe("TheAccordion", () => {
+describe("Accordion", () => {
   const createConfig = (config = {}) => ({
     global: {
       stubs: {
@@ -23,7 +23,7 @@ describe("TheAccordion", () => {
       default: "<h3>My nested child</h3>",
     };
     const config = { slots };
-    const wrapper = mount(TheAccordion, createConfig(config));
+    const wrapper = mount(Accordion, createConfig(config));
 
     expect(wrapper.text()).not.toMatch("My nested child");
     const clickableArea = wrapper.find("[data-test='clickable-area']");
@@ -35,7 +35,7 @@ describe("TheAccordion", () => {
     it("renders default content", async () => {
       const slots = {};
       const config = { slots };
-      const wrapper = mount(TheAccordion, createConfig(config));
+      const wrapper = mount(Accordion, createConfig(config));
       const clickableArea = wrapper.find("[data-test='clickable-area']");
       await clickableArea.trigger("click");
       expect(wrapper.text()).toMatch("Whoops, somebody forgot to populate me");
