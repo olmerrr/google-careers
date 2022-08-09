@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660039013121" clover="3.2.0">
-  <project timestamp="1660039013122" name="All files">
-    <metrics statements="188" coveredstatements="188" conditionals="13" coveredconditionals="12" methods="61" coveredmethods="60" elements="262" coveredelements="260" complexity="0" loc="188" ncloc="188" packages="10" files="24" classes="24"/>
+<coverage generated="1660059758760" clover="3.2.0">
+  <project timestamp="1660059758760" name="All files">
+    <metrics statements="230" coveredstatements="230" conditionals="13" coveredconditionals="12" methods="66" coveredmethods="65" elements="309" coveredelements="307" complexity="0" loc="230" ncloc="230" packages="11" files="28" classes="28"/>
     <package name="src.api">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\api\getJobs.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src.components.JobResults">
@@ -44,8 +44,40 @@
         <line num="71" count="14" type="stmt"/>
       </file>
     </package>
+    <package name="src.components.JobResults.JobFiltersSidebar">
+      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="JobFiltersSidebar.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobResults\JobFiltersSidebar\JobFiltersSidebar.vue">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+      </file>
+      <file name="JobFiltersSidebarCheckboxGroup.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobResults\JobFiltersSidebar\JobFiltersSidebarCheckboxGroup.vue">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="52" count="6" type="stmt"/>
+        <line num="53" count="6" type="stmt"/>
+        <line num="55" count="6" type="stmt"/>
+        <line num="57" count="6" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="62" count="6" type="stmt"/>
+      </file>
+    </package>
     <package name="src.components.JobSearch">
-      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <metrics statements="34" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
       <file name="Headline.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobSearch\Headline.vue">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="16" count="2" type="stmt"/>
@@ -59,6 +91,20 @@
         <line num="51" count="8" type="stmt"/>
         <line num="52" count="6" type="stmt"/>
         <line num="53" count="6" type="stmt"/>
+      </file>
+      <file name="JobSearchForm.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobSearch\JobSearchForm.vue">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
       </file>
       <file name="Spotlight.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\JobSearch\Spotlight.vue">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -111,8 +157,8 @@
       <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
       <file name="Accordion.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\Accordion.vue">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
         <line num="32" count="8" type="stmt"/>
         <line num="34" count="8" type="stmt"/>
         <line num="35" count="8" type="stmt"/>
@@ -122,9 +168,9 @@
       </file>
       <file name="ActionButton.vue" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\components\Shared\ActionButton.vue">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="22" count="14" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="22" count="16" type="stmt"/>
         <line num="27" count="6" type="stmt"/>
         <line num="29" count="6" type="stmt"/>
         <line num="30" count="6" type="stmt"/>
@@ -180,51 +226,51 @@
       </file>
     </package>
     <package name="src.store">
-      <metrics statements="59" coveredstatements="59" conditionals="2" coveredconditionals="2" methods="24" coveredmethods="24"/>
+      <metrics statements="67" coveredstatements="67" conditionals="2" coveredconditionals="2" methods="24" coveredmethods="24"/>
       <file name="actions.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\actions.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
         <line num="13" count="4" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
       </file>
       <file name="composables.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\composables.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-        <line num="1" count="8" type="stmt"/>
-        <line num="2" count="8" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
-        <line num="19" count="8" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
         <line num="21" count="2" type="stmt"/>
-        <line num="24" count="8" type="stmt"/>
+        <line num="24" count="9" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
-        <line num="30" count="8" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
         <line num="31" count="2" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
       </file>
       <file name="constants.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\constants.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="14" type="stmt"/>
-        <line num="5" count="14" type="stmt"/>
-        <line num="6" count="14" type="stmt"/>
-        <line num="7" count="14" type="stmt"/>
-        <line num="10" count="14" type="stmt"/>
-        <line num="11" count="14" type="stmt"/>
-        <line num="12" count="14" type="stmt"/>
-        <line num="15" count="14" type="stmt"/>
-        <line num="16" count="14" type="stmt"/>
-        <line num="17" count="14" type="stmt"/>
+        <line num="2" count="18" type="stmt"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="7" count="18" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="15" count="18" type="stmt"/>
+        <line num="16" count="18" type="stmt"/>
+        <line num="17" count="18" type="stmt"/>
       </file>
       <file name="getters.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\getters.ts">
         <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
         <line num="20" count="6" type="stmt"/>
         <line num="21" count="2" type="stmt"/>
@@ -240,23 +286,34 @@
         <line num="38" count="2" type="stmt"/>
         <line num="39" count="2" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
       </file>
       <file name="mutations.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\mutations.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="21" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
       </file>
       <file name="state.ts" path="C:\Users\dombr\OneDrive\Рабочий стол\codding\vue-vuex-ts-jest-boris\src\store\state.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="30" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="31" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.test.unit.store">

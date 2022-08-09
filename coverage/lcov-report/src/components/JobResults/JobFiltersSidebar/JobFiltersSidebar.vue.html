@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -118,8 +118,16 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,17 +162,27 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,56 +193,65 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;div
-    class="
-      flex flex-col
-      p-4
-      bg-white
-      border-r border-solid border-brand-gray-1
-      w-96
-    "
+    class="flex flex-col p-4 bg-white border-r border-solid border-brand-gray-1 w-96"
   &gt;
     &lt;section class="pb-5"&gt;
-      &lt;job-filters-sidebar-prompt /&gt;
+      &lt;div class="flex flex-row justify-between"&gt;
+        &lt;h3 class="my-4 text-base font-semibold"&gt;What do you want to do?&lt;/h3&gt;
+        &lt;div class="flex items-center text-sm"&gt;
+          &lt;action-button text="Clear filters" type="secondary" /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 &nbsp;
-      &lt;accordion header="Skills and Qualifications"&gt;
-        &lt;job-filters-sidebar-skills /&gt;
-      &lt;/accordion&gt;
+      &lt;accordion header="Degree" /&gt;
 &nbsp;
-      &lt;accordion header="Degrees"&gt;
-        &lt;job-filters-sidebar-degrees /&gt;
-      &lt;/accordion&gt;
+      &lt;job-filters-sidebar-checkbox-group
+        header="Job Types"
+        :unique-values="uniqueJobTypes"
+        :mutation="ADD_SELECTED_JOB_TYPES"
+        data-test="job-types-filter"
+      /&gt;
 &nbsp;
-      &lt;accordion header="Job Types"&gt;
-        &lt;job-filters-sidebar-job-types /&gt;
-      &lt;/accordion&gt;
-&nbsp;
-      &lt;accordion header="Organizations"&gt;
-        &lt;job-filters-sidebar-organizations /&gt;
-      &lt;/accordion&gt;
+      &lt;job-filters-sidebar-checkbox-group
+        header="Organizations"
+        :unique-values="uniqueOrganizations"
+        :mutation="ADD_SELECTED_ORGANIZATIONS"
+        data-test="organizations-filter"
+      /&gt;
     &lt;/section&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script lang="ts"&gt;
-import { defineComponent } from "vue";
+import { defineComponent } from "@vue/runtime-core";
 &nbsp;
+import ActionButton from "@/components/Shared/ActionButton.vue";
 import Accordion from "@/components/Shared/Accordion.vue";
+import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 &nbsp;
-import JobFiltersSidebarPrompt from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarPrompt.vue";
-import JobFiltersSidebarSkills from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarSkills.vue";
-import JobFiltersSidebarDegrees from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarDegrees.vue";
-import JobFiltersSidebarJobTypes from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarJobTypes.vue";
-import JobFiltersSidebarOrganizations from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarOrganizations.vue";
+import { useUniqueJobTypes, useUniqueOrganizations } from "@/store/composables";
+import {
+  ADD_SELECTED_JOB_TYPES,
+  ADD_SELECTED_ORGANIZATIONS,
+} from "@/store/constants";
 &nbsp;
 export default defineComponent({
   name: "JobFiltersSidebar",
   components: {
+    ActionButton,
     Accordion,
-    JobFiltersSidebarPrompt,
-    JobFiltersSidebarSkills,
-    JobFiltersSidebarDegrees,
-    JobFiltersSidebarJobTypes,
-    JobFiltersSidebarOrganizations,
+    JobFiltersSidebarCheckboxGroup,
+  },
+  setup() {
+    const uniqueJobTypes = useUniqueJobTypes();
+    const uniqueOrganizations = useUniqueOrganizations();
+&nbsp;
+    return {
+      uniqueJobTypes,
+      uniqueOrganizations,
+      ADD_SELECTED_JOB_TYPES,
+      ADD_SELECTED_ORGANIZATIONS,
+    };
   },
 });
 &lt;/script&gt;
@@ -235,7 +262,7 @@ export default defineComponent({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Apr 05 2022 17:12:42 GMT-0400 (Eastern Daylight Time)
+                at Tue Aug 09 2022 18:42:38 GMT+0300 (Eastern European Summer Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
