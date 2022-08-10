@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { Job } from "@/api/types";
 
 const getJobs = async () => {
