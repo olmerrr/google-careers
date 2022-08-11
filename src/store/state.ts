@@ -4,9 +4,9 @@ const state = (): GlobalState => {
   return {
     isLoggedIn: false,
     jobs: [],
+    degrees: [],
     selectedOrganizations: [],
     selectedJobTypes: [],
-    degrees: [],
     selectedDegrees: [],
   };
 };

@@ -1,7 +1,6 @@
 import actions from "@/store/actions";
 
 import getJobs from "@/api/getJobs";
-
 jest.mock("@/api/getJobs");
 const getJobsMock = getJobs as jest.Mock;
 
@@ -21,7 +20,7 @@ describe("actions", () => {
       expect(getJobs).toHaveBeenCalled();
     });
 
-    it("sends message to save received jobs in store", async () => {
+    it("sends message to save receiived jobs in store", async () => {
       const commit = jest.fn();
       const context = { commit };
       await actions.FETCH_JOBS(context);
@@ -33,10 +32,15 @@ describe("actions", () => {
 
   describe("FETCH_DEGREES", () => {
     beforeEach(() => {
-      getDegreesMock.mockResolvedValue([{ id: 1, degree: "Bachelor's" }]);
+      getDegreesMock.mockResolvedValue([
+        {
+          id: 1,
+          degree: "Bachelor's",
+        },
+      ]);
     });
 
-    it("makes a request to fetch degrees", async () => {
+    it("makes request to fetch degrees", async () => {
       const context = { commit: jest.fn() };
       await actions.FETCH_DEGREES(context);
       expect(getDegrees).toHaveBeenCalled();
@@ -47,7 +51,10 @@ describe("actions", () => {
       const context = { commit };
       await actions.FETCH_DEGREES(context);
       expect(commit).toHaveBeenCalledWith("RECEIVE_DEGREES", [
-        { id: 1, degree: "Bachelor's" },
+        {
+          id: 1,
+          degree: "Bachelor's",
+        },
       ]);
     });
   });

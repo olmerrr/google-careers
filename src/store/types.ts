@@ -1,10 +1,10 @@
-import { Degree, Job } from "@/api/types";
+import { Job, Degree } from "@/api/types";
 
 export interface GlobalState {
   isLoggedIn: boolean;
   jobs: Job[];
+  degrees: Degree[];
   selectedOrganizations: string[];
   selectedJobTypes: string[];
-  degrees: Degree[];
   selectedDegrees: string[];
 }
