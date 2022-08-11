@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, PropType } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 import { key } from "@/store";
@@ -40,7 +40,7 @@ export default defineComponent({
       required: true,
     },
     uniqueValues: {
-      type: Set,
+      type: [Set, Array] as PropType<string[] | Set<string>>,
       required: true,
     },
     mutation: {
