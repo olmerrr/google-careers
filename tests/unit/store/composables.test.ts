@@ -53,15 +53,14 @@ describe("composables", () => {
   });
 
   describe("useUniqueDegrees", () => {
-    it("retrieves unique degrees from store", () => {
+    it("retrieves uniqued degrees from store", () => {
       useStoreMock.mockReturnValue({
         getters: {
-          UNIQUE_DEGREES: ["Ph.D"],
+          UNIQUE_DEGREES: ["Ph.D "],
         },
       });
-
       const result = useUniqueDegrees();
-      expect(result.value).toEqual(["Ph.D"]);
+      expect(result.value).toEqual(["Ph.D "]);
     });
   });
 
