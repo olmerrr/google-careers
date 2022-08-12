@@ -23,6 +23,8 @@ describe("JobFilterSidebarCheckboxGroup", () => {
   });
 
   it("renders unique list of job types for filtering jobs", async () => {
+    useStore.mockReturnValue({ commit: jest.fn(), subscribe: jest.fn() });
+
     const props = {
       uniqueValues: new Set(["ValueA", "ValueB"]),
     };
@@ -37,7 +39,7 @@ describe("JobFilterSidebarCheckboxGroup", () => {
   describe("when user clicks checkbox", () => {
     it("communicates that user has selected checkbox for value", async () => {
       const commit = jest.fn();
-      useStore.mockReturnValue({ commit });
+      useStore.mockReturnValue({ commit, subscribe: jest.fn() });
       useRouter.mockReturnValue({ push: jest.fn() });
       const props = {
         mutation: "SOME_MUTATION",
@@ -52,7 +54,7 @@ describe("JobFilterSidebarCheckboxGroup", () => {
     });
 
     it("navigates user to job results page to see fresh batch of filtered jobs", async () => {
-      useStore.mockReturnValue({ commit: jest.fn() });
+      useStore.mockReturnValue({ commit: jest.fn(), subscribe: jest.fn() });
       const push = jest.fn();
       useRouter.mockReturnValue({ push });
       const props = {
