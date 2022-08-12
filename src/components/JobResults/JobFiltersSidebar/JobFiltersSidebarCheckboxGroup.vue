@@ -23,9 +23,12 @@
 
 <script lang="ts">
 import { defineComponent, ref, PropType } from "vue";
-import { useStore } from "vuex";
 import { useRouter } from "vue-router";
+
+import { useStore } from "vuex";
 import { key } from "@/store";
+
+import { CLEAR_USER_JOB_SELECTIONS } from "@/store/constants";
 
 import Accordion from "@/components/Shared/Accordion.vue";
 
@@ -53,6 +56,12 @@ export default defineComponent({
     const router = useRouter();
 
     const selectedValues = ref<string[]>([]);
+
+    store.subscribe((mutation) => {
+      if (mutation.type === CLEAR_USER_JOB_SELECTIONS) {
+        selectedValues.value = [];
+      }
+    });
 
     const selectValue = () => {
       store.commit(props.mutation, selectedValues.value);
