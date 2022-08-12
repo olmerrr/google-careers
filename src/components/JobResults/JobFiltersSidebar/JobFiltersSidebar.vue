@@ -14,26 +14,17 @@
         </div>
       </div>
 
-      <job-filters-sidebar-checkbox-group
-        header="Degrees"
-        :unique-values="uniqueDegrees"
-        :mutation="ADD_SELECTED_DEGREES"
-        data-test="degrees-filter"
-      />
+      <accordion header="Degrees">
+        <job-filters-sidebar-degrees />
+      </accordion>
 
-      <job-filters-sidebar-checkbox-group
-        header="Job Types"
-        :unique-values="uniqueJobTypes"
-        :mutation="ADD_SELECTED_JOB_TYPES"
-        data-test="job-types-filter"
-      />
+      <accordion header="Job Types">
+        <job-filters-sidebar-job-type />
+      </accordion>
 
-      <job-filters-sidebar-checkbox-group
-        header="Organizations"
-        :unique-values="uniqueOrganizations"
-        :mutation="ADD_SELECTED_ORGANIZATIONS"
-        data-test="organizations-filter"
-      />
+      <accordion header="Organizations">
+        <job-filters-sidebar-organizations />
+      </accordion>
     </section>
   </div>
 </template>
@@ -44,48 +35,32 @@ import { useStore } from "vuex";
 
 import { key } from "@/store";
 
+import Accordion from "@/components/Shared/Accordion.vue";
 import ActionButton from "@/components/Shared/ActionButton.vue";
-import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
-import {
-  useUniqueJobTypes,
-  useUniqueOrganizations,
-  useUniqueDegrees,
-} from "@/store/composables";
+import { CLEAR_USER_JOB_SELECTIONS } from "@/store/constants";
 
-import {
-  ADD_SELECTED_JOB_TYPES,
-  ADD_SELECTED_ORGANIZATIONS,
-  ADD_SELECTED_DEGREES,
-  CLEAR_USER_JOB_SELECTIONS,
-} from "@/store/constants";
+import JobFiltersSidebarDegrees from "./JobFiltersSidebarDegrees.vue";
+import JobFiltersSidebarJobType from "./JobFiltersSidebarJobType.vue";
+import JobFiltersSidebarOrganizations from "./JobFiltersSidebarOrganizations.vue";
 
 export default defineComponent({
   name: "JobFiltersSidebar",
   components: {
+    Accordion,
     ActionButton,
-    JobFiltersSidebarCheckboxGroup,
+    JobFiltersSidebarDegrees,
+    JobFiltersSidebarJobType,
+    JobFiltersSidebarOrganizations,
   },
   setup() {
     const store = useStore(key);
-
-    const uniqueJobTypes = useUniqueJobTypes();
-    const uniqueOrganizations = useUniqueOrganizations();
-    const uniqueDegrees = useUniqueDegrees();
 
     const clearUserJobFilterSelections = () => {
       store.commit(CLEAR_USER_JOB_SELECTIONS);
     };
 
-    return {
-      uniqueJobTypes,
-      uniqueOrganizations,
-      uniqueDegrees,
-      clearUserJobFilterSelections,
-      ADD_SELECTED_JOB_TYPES,
-      ADD_SELECTED_ORGANIZATIONS,
-      ADD_SELECTED_DEGREES,
-    };
+    return { clearUserJobFilterSelections };
   },
 });
 </script>
