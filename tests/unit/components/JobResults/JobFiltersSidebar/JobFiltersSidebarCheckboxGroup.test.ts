@@ -1,9 +1,11 @@
 import { shallowMount } from "@vue/test-utils";
 import { useStore } from "vuex";
 jest.mock("vuex");
+const useStoreMock = useStore as jest.Mock;
 
 import { useRouter } from "vue-router";
 jest.mock("vue-router");
+const useRouterMock = useRouter as jest.Mock;
 
 import JobFilterSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
@@ -17,8 +19,7 @@ describe("JobFilterSidebarCheckboxGroup", () => {
   });
 
   it("renders unique list of job types for filtering jobs", async () => {
-    useStore.mockReturnValue({ commit: jest.fn(), subscribe: jest.fn() });
-
+    useStoreMock.mockReturnValue({ commit: jest.fn(), subscribe: jest.fn() });
     const props = {
       uniqueValues: new Set(["ValueA", "ValueB"]),
     };
@@ -34,8 +35,8 @@ describe("JobFilterSidebarCheckboxGroup", () => {
   describe("when user clicks checkbox", () => {
     it("communicates that user has selected checkbox for value", async () => {
       const commit = jest.fn();
-      useStore.mockReturnValue({ commit, subscribe: jest.fn() });
-      useRouter.mockReturnValue({ push: jest.fn() });
+      useStoreMock.mockReturnValue({ commit, subscribe: jest.fn() });
+      useRouterMock.mockReturnValue({ push: jest.fn() });
       const props = {
         mutation: "SOME_MUTATION",
         uniqueValues: new Set(["Full-time"]),
@@ -44,16 +45,16 @@ describe("JobFilterSidebarCheckboxGroup", () => {
         JobFilterSidebarCheckboxGroup,
         createConfig(props)
       );
-
       const fullTimeInput = wrapper.find("[data-test='Full-time']");
-      await fullTimeInput.setChecked();
+      await fullTimeInput.setValue(true);
+
       expect(commit).toHaveBeenCalledWith("SOME_MUTATION", ["Full-time"]);
     });
 
     it("navigates user to job results page to see fresh batch of filtered jobs", async () => {
-      useStore.mockReturnValue({ commit: jest.fn(), subscribe: jest.fn() });
+      useStoreMock.mockReturnValue({ commit: jest.fn(), subscribe: jest.fn() });
       const push = jest.fn();
-      useRouter.mockReturnValue({ push });
+      useRouterMock.mockReturnValue({ push });
       const props = {
         uniqueValues: new Set(["Full-time"]),
       };
@@ -62,7 +63,7 @@ describe("JobFilterSidebarCheckboxGroup", () => {
         createConfig(props)
       );
       const fullTimeInput = wrapper.find("[data-test='Full-time']");
-      await fullTimeInput.setChecked();
+      await fullTimeInput.setValue(true);
 
       expect(push).toHaveBeenCalledWith({ name: "JobResults" });
     });
