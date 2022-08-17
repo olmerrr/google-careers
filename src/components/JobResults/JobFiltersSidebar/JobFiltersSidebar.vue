@@ -60,7 +60,6 @@ export default defineComponent({
     };
 
     onMounted(parseSkillsSearchTerm);
-    return {};
   },
 });
 </script>
