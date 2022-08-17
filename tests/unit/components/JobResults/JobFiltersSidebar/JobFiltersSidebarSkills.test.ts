@@ -1,3 +1,4 @@
+import { UPDATE_SKILLS_SEARCH_TERM } from "./../../../../../src/store/constants";
 import { shallowMount } from "@vue/test-utils";
 
 import { useStore } from "vuex";
@@ -17,5 +18,22 @@ describe("JobFiltersSidebarSkills", () => {
     const skillsSearchInput = wrapper.find("[data-test='skills-search-input']");
     const inputElement = skillsSearchInput.element as HTMLInputElement;
     expect(inputElement.value).toBe("Programmer");
+  });
+
+  it("tells store that the user has entered skills search term", async () => {
+    const commit = jest.fn();
+    useStoreMock.mockReturnValue({
+      state: {
+        skillsSearchTerm: "",
+      },
+      commit,
+    });
+    const wrapper = shallowMount(JobFiltersSidebarSkills);
+    const skillsSearchInput = wrapper.find("[data-test='skills-search-input']");
+    await skillsSearchInput.setValue("Vue Developer");
+    expect(commit).toHaveBeenCalledWith(
+      "UPDATE_SKILLS_SEARCH_TERM",
+      "Vue Developer"
+    );
   });
 });
