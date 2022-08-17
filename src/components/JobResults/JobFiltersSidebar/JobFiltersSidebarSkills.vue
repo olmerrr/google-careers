@@ -1,10 +1,11 @@
 <template>
   <div class="mt-5">
     <input
-      v-model.lazy="skillsSearchTerm"
+      v-model.trim="skillsSearchTerm"
       type="text"
       class="p-3 h-12 border border-solid border-brand-gray-1 shadow-gray rounded w-full text-base"
       placeholder="Computer programming, Finance degree"
+      data-test="skills-search-input"
     />
   </div>
 </template>
